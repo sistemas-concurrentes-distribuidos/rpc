@@ -98,6 +98,7 @@ func calcularPromedioDeAlumno(alumno string) float64 {
 func server() {
 	rpc.Register(new(Server))
 	ln, err := net.Listen("tcp", ":9999")
+	fmt.Println("Servidor iniciado en puerto: 9999")
 	if err != nil {
 		fmt.Println(err)
 	}
